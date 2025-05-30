@@ -9,12 +9,6 @@ const Navbar: FC = () => (
       </Link>
       <div className="hidden md:flex space-x-8">
         <Link
-          to="#about"
-          className="text-zinc-400 hover:text-cyan-400 transition-colors font-mono"
-        >
-          // about
-        </Link>
-        <Link
           to="#expertise"
           className="text-zinc-400 hover:text-cyan-400 transition-colors font-mono"
         >

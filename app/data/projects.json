@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "slug": "flight-local-b2b-travel",
+    "title": "Flight Local (B2B Travel Solution)",
+    "description": "A B2B travel platform for agencies to manage bookings and itineraries.",
+    "techStack": ["React", "Node.js", "TailwindCSS"],
+    "category": "Web App",
+    "image": "/images/flight-local.png",
+    "liveUrl": "#",
+    "sourceUrl": "#"
+  },
+  {
+    "id": 2,
+    "slug": "ai-lab-granada",
+    "title": "AI Lab Granada",
+    "description": "A research group website with blog and publication management.",
+    "techStack": ["Vue.js", "Firebase", "TailwindCSS"],
+    "category": "Blog Site",
+    "image": "/images/ai-lab.png",
+    "liveUrl": "#",
+    "sourceUrl": "#"
+  },
+  {
+    "id": 3,
+    "slug": "khora-urban-thinkers",
+    "title": "Khora – Urban Thinkers",
+    "description": "A single page marketing site for an urban consulting firm.",
+    "techStack": ["Next.js", "Supabase", "TailwindCSS"],
+    "category": "Marketing Site",
+    "image": "/images/khora.png",
+    "liveUrl": "#",
+    "sourceUrl": "#"
+  },
+  {
+    "id": 4,
+    "slug": "tryotel-cross-platform-app",
+    "title": "Tryotel – Cross-Platform Travel App",
+    "description": "A mobile app for booking hotels and flights, built with Flutter.",
+    "techStack": ["Flutter", "Firebase"],
+    "category": "App Landing Page",
+    "image": "/images/tryotel.png",
+    "liveUrl": "#",
+    "sourceUrl": "#"
+  },
+  {
+    "id": 5,
+    "slug": "tapy-connect",
+    "title": "Tapy – Download. Connect. Unlock.",
+    "description": "A landing page for a smart NFC business card product.",
+    "techStack": ["Gatsby", "Styled Components"],
+    "category": "App Landing Page",
+    "image": "/images/tapy.png",
+    "liveUrl": "#",
+    "sourceUrl": "#"
+  },
+  {
+    "id": 6,
+    "slug": "web-scraper-dashboard",
+    "title": "Web Scraper Dashboard",
+    "description": "A dashboard for managing and visualizing web scraping jobs.",
+    "techStack": ["Python", "Flask", "React"],
+    "category": "Web Scraping",
+    "image": "/images/web-scraper.png",
+    "liveUrl": "#",
+    "sourceUrl": "#"
+  },
+  {
+    "id": 7,
+    "slug": "minimal-blog",
+    "title": "Minimal Blog",
+    "description": "A clean, minimal blog site with markdown support.",
+    "techStack": ["Next.js", "MDX", "TailwindCSS"],
+    "category": "Blog Site",
+    "image": "/images/minimal-blog.png",
+    "liveUrl": "#",
+    "sourceUrl": "#"
+  },
+  {
+    "id": 8,
+    "slug": "eventify-landing",
+    "title": "Eventify Landing Page",
+    "description": "A single page marketing site for an event management SaaS.",
+    "techStack": ["React", "Chakra UI"],
+    "category": "Marketing Site",
+    "image": "/images/eventify.png",
+    "liveUrl": "#",
+    "sourceUrl": "#"
+  },
+  {
+    "id": 9,
+    "slug": "crypto-news-scraper",
+    "title": "Crypto News Scraper",
+    "description": "A web app that scrapes and aggregates crypto news from multiple sources.",
+    "techStack": ["Python", "FastAPI", "Vue.js"],
+    "category": "Web Scraping",
+    "image": "/images/crypto-news.png",
+    "liveUrl": "#",
+    "sourceUrl": "#"
+  },
+  {
+    "id": 10,
+    "slug": "portfolio-single-page",
+    "title": "Portfolio Single Page",
+    "description": "A personal portfolio single page site with smooth scrolling and animations.",
+    "techStack": ["React", "Framer Motion", "TailwindCSS"],
+    "category": "Single Page Site",
+    "image": "/images/portfolio.png",
+    "liveUrl": "#",
+    "sourceUrl": "#"
+  }
+]
