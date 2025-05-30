@@ -3,6 +3,8 @@ import { json } from "@remix-run/node";
 import { useLoaderData, Link } from "@remix-run/react";
 import Layout from "../components/Layout";
 import type { Project } from "../components/Projects";
+import NoiseBg from "../components/NoiseBg";
+import stringToHex from "../utils/stringToHex";
 import fs from "fs/promises";
 import path from "path";
 
@@ -26,16 +28,17 @@ export async function loader({ params }: LoaderFunctionArgs) {
 
 export default function ProjectDetail() {
   const { project } = useLoaderData<typeof loader>();
+  const hex = stringToHex(project.slug);
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto py-24 px-4">
+      <div className="max-w-4xl mx-auto py-24 px-4 relative">
         <Link
-          to="/#projects"
-          className="text-cyan-400 font-mono hover:underline"
+          to="/"
+          className="text-cyan-400 font-mono hover:underline relative z-10"
         >
           &larr; Back to Projects
         </Link>
-        <div className="mt-8 flex flex-col md:flex-row gap-10 items-center">
+        <div className="mt-8 flex flex-col md:flex-row gap-10 items-center relative z-10">
           <div className="flex-1">
             <h1 className="text-4xl font-extrabold mb-4">{project.title}</h1>
             <p className="text-zinc-400 mb-6">{project.description}</p>
@@ -63,10 +66,9 @@ export default function ProjectDetail() {
             </a>
           </div>
           <div className="flex-1 flex items-center justify-center">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-80 h-56 object-cover bg-zinc-800 rounded-xl"
+            <NoiseBg
+              hex={hex}
+              className="w-80 h-56 object-cover bg-zinc-800 rounded-xl opacity-60"
             />
           </div>
         </div>

@@ -1,6 +1,8 @@
 import type { FC } from "react";
 import { Link } from "@remix-run/react";
 import { useState, useMemo } from "react";
+import NoiseBg from "./NoiseBg";
+import stringToHex from "../utils/stringToHex";
 
 export interface Project {
   id: number;
@@ -50,12 +52,13 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
         {/* Filter Bar & Search */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4">
           <div className="flex flex-wrap gap-2 items-center">
+            <span className="font-bold text-zinc-100 mr-2">Filter by</span>
             {categories.map((cat) => (
               <button
                 key={cat}
                 className={`px-4 py-2 rounded font-mono text-sm border transition ${
                   selectedCategory === cat
-                    ? "bg-cyan-400 text-zinc-900 border-cyan-400"
+                    ? "bg-cyan-400 text-zinc-900 border-cyan-400 underline underline-offset-4"
                     : "bg-zinc-800 text-zinc-100 border-zinc-700 hover:bg-cyan-400 hover:text-zinc-900 hover:border-cyan-400"
                 }`}
                 onClick={() => setSelectedCategory(cat)}
@@ -72,32 +75,56 @@ const Projects: FC<ProjectsProps> = ({ projects }) => {
             onChange={(e) => setSearch(e.target.value)}
           />
         </div>
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Masonry Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-[220px]">
           {filteredProjects.length === 0 ? (
             <div className="col-span-full text-center text-zinc-400 font-mono py-12">
               No projects found.
             </div>
           ) : (
-            filteredProjects.map((project) => (
-              <Link
-                key={project.id}
-                to={`/${project.slug}`}
-                className="bg-[#232127] rounded-lg shadow hover:shadow-lg transition overflow-hidden block"
-              >
-                <div className="h-40 bg-gray-800 flex items-center justify-center">
-                  <span className="text-gray-500 font-mono">[Image]</span>
-                </div>
-                <div className="p-4">
-                  <h3 className="text-white font-semibold truncate">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-400 text-xs mt-1">
-                    {project.category}
-                  </p>
-                </div>
-              </Link>
-            ))
+            filteredProjects.map((project, idx) => {
+              const hex = stringToHex(project.slug);
+              return (
+                <Link
+                  key={project.id}
+                  to={`/${project.slug}`}
+                  className={`relative group bg-[#232127] rounded-lg shadow hover:shadow-xl transition overflow-hidden block
+                    ${
+                      idx === 0
+                        ? "sm:col-span-2 sm:row-span-2 lg:col-span-2 lg:row-span-2 min-h-[440px]"
+                        : ""
+                    }`}
+                  style={{ minHeight: idx === 0 ? 440 : 220 }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/60 to-zinc-800/80 group-hover:from-cyan-400/10 group-hover:to-purple-400/10 transition" />
+                  <NoiseBg
+                    hex={hex}
+                    className="absolute inset-0 w-full h-full object-cover opacity-60"
+                  />
+                  <div className="h-full flex flex-col justify-end relative z-10 p-6">
+                    <div className="mb-4 flex-1 flex items-center justify-center">
+                      <span className="text-gray-300 font-mono text-lg">
+                        [Image]
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="text-white font-semibold text-lg truncate mb-1">
+                        {project.title}
+                      </h3>
+                      <p className="text-zinc-400 text-xs mb-2 truncate">
+                        {project.category}
+                      </p>
+                      <p className="text-zinc-400 text-xs truncate">
+                        {project.description}
+                      </p>
+                    </div>
+                  </div>
+                  <span className="absolute right-4 top-4 text-xs text-cyan-400 font-mono opacity-0 group-hover:opacity-100 transition">
+                    View Project →
+                  </span>
+                </Link>
+              );
+            })
           )}
         </div>
       </div>

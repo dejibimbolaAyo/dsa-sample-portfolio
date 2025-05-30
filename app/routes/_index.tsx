@@ -5,6 +5,8 @@ import Layout from "../components/Layout";
 import Projects, { Project } from "../components/Projects";
 import Contact from "../components/Contact";
 import Expertise from "../components/Expertise";
+import QuoteCard from "../components/QuoteCard";
+import StatsCard from "../components/StatsCard";
 import fs from "fs/promises";
 import path from "path";
 import Hero from "~/components/Hero";
@@ -25,6 +27,8 @@ export default function Index() {
       <Hero />
       <Expertise />
       <Projects projects={projects} />
+      <StatsCard />
+      <QuoteCard />
       <Contact />
     </Layout>
   );
