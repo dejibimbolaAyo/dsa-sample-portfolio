@@ -33,7 +33,7 @@ export default function ProjectDetail() {
     <Layout>
       <div className="max-w-4xl mx-auto py-24 px-4 relative">
         <Link
-          to="/"
+          to="/#projects"
           className="text-cyan-400 font-mono hover:underline relative z-10"
         >
           &larr; Back to Projects
