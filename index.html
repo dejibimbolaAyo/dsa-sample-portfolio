@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #22d3ee 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="relative bg-zinc-900 text-zinc-100 font-sans overflow-x-hidden">
+    <!-- Animated Gradient Background -->
+    <div class="pointer-events-none fixed inset-0 z-0">
+        <svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <radialGradient id="bg-grad1" cx="30%" cy="20%" r="80%">
+                    <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.18" />
+                    <stop offset="100%" stop-color="#18181b" stop-opacity="0" />
+                </radialGradient>
+                <radialGradient id="bg-grad2" cx="80%" cy="80%" r="70%">
+                    <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.13" />
+                    <stop offset="100%" stop-color="#18181b" stop-opacity="0" />
+                </radialGradient>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#bg-grad1)" />
+            <rect width="100%" height="100%" fill="url(#bg-grad2)" />
+        </svg>
+        <div class="absolute left-[-10vw] top-[30vh] w-[40vw] h-[40vw] bg-cyan-400 opacity-10 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute right-[-15vw] bottom-[10vh] w-[50vw] h-[30vw] bg-purple-400 opacity-10 rounded-full blur-3xl animate-pulse-slow"></div>
+    </div>
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-zinc-900/80 backdrop-blur-sm z-50 border-b border-zinc-700">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-xl font-bold text-cyan-400 font-sans">Portfolio</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-zinc-400 hover:text-cyan-400 transition-colors font-mono">// about</a>
+                    <a href="#expertise" class="text-zinc-400 hover:text-cyan-400 transition-colors font-mono">// expertise</a>
+                    <a href="#projects" class="text-zinc-400 hover:text-cyan-400 transition-colors font-mono">// projects</a>
+                    <a href="#contact" class="text-zinc-400 hover:text-cyan-400 transition-colors font-mono">// contact</a>
+                </div>
+                <button class="md:hidden text-zinc-400 hover:text-cyan-400">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col justify-between items-center bg-[#151e27] overflow-hidden pt-0">
+        <!-- Navigation -->
+        <nav class="absolute top-0 left-0 w-full flex justify-between items-center px-12 pt-8 z-20">
+            <div class="text-lg font-mono text-cyan-300 font-semibold tracking-tight">Deji<span class="text-purple-300">._</span></div>
+            <div class="flex space-x-12 text-xs font-mono text-gray-200 font-light">
+                <a href="#home" class="flex flex-col items-center group">
+                    <span class="text-[10px] text-gray-400 group-hover:text-cyan-300">01</span>
+                    <span class="group-hover:text-cyan-300">// home</span>
+                </a>
+                <a href="#expertise" class="flex flex-col items-center group">
+                    <span class="text-[10px] text-gray-400 group-hover:text-cyan-300">02</span>
+                    <span class="group-hover:text-cyan-300">// expertise</span>
+                </a>
+                <a href="#work" class="flex flex-col items-center group">
+                    <span class="text-[10px] text-gray-400 group-hover:text-cyan-300">03</span>
+                    <span class="group-hover:text-cyan-300">// work</span>
+                </a>
+                <a href="#experience" class="flex flex-col items-center group">
+                    <span class="text-[10px] text-gray-400 group-hover:text-cyan-300">04</span>
+                    <span class="group-hover:text-cyan-300">// experience</span>
+                </a>
+                <a href="#contact" class="flex flex-col items-center group">
+                    <span class="text-[10px] text-gray-400 group-hover:text-cyan-300">05</span>
+                    <span class="group-hover:text-cyan-300">// contact</span>
+                </a>
+            </div>
+        </nav>
+        <!-- Geometric Background Placeholder -->
+        <div class="absolute inset-0 flex items-center justify-center z-0">
+            <div class="w-[500px] h-[500px] bg-gradient-to-br from-[#232c3a] to-[#1a222c] rounded-2xl shadow-2xl flex items-center justify-center">
+                <div class="w-64 h-64 bg-gradient-to-tr from-orange-400 to-yellow-300 opacity-80 rounded-2xl rotate-12"></div>
+            </div>
+        </div>
+        <!-- Main Content -->
+        <div class="relative z-10 flex flex-col items-center justify-center flex-1 w-full pt-32">
+            <h1 class="text-[8vw] md:text-[7vw] lg:text-[6vw] font-extrabold text-white leading-none tracking-tight text-center" style="letter-spacing: -0.04em;">
+                Dejibimbola
+            </h1>
+            <p class="mt-8 text-sm md:text-base tracking-widest text-white font-mono text-center">SOFTWARE ENGINEER, FRONT END & APP DEVELOPER.</p>
+        </div>
+        <!-- As Featured In -->
+        <div class="relative z-10 flex flex-col items-center pb-8 w-full">
+            <p class="text-xs text-gray-400 tracking-widest mb-2">AS FEATURED IN</p>
+            <div class="flex flex-row items-center space-x-8 opacity-80">
+                <div class="w-24 h-6 bg-gray-700 rounded"></div>
+                <div class="w-24 h-6 bg-gray-700 rounded"></div>
+                <div class="w-24 h-6 bg-gray-700 rounded"></div>
+                <div class="w-24 h-6 bg-gray-700 rounded"></div>
+            </div>
+        </div>
+        <!-- Bottom right circle -->
+        <div class="absolute bottom-4 right-8 z-20">
+            <div class="w-5 h-5 border-2 border-cyan-300 rounded-full"></div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="expertise" class="py-32 bg-[#232127]">
+        <h2 class="text-5xl font-bold text-center mb-16 text-white">My Expertise</h2>
+        <div class="flex justify-center">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-0 w-full max-w-5xl border border-gray-500 rounded overflow-hidden">
+                <!-- Card 1 -->
+                <div class="flex flex-col items-start p-8 border-b md:border-b-0 md:border-r border-gray-500 bg-[#232127] min-h-[260px]">
+                    <div class="mb-4">
+                        <i class="fas fa-desktop text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2"><span class="text-pink-400 font-mono">Software</span> <span class="text-white">Development</span></h3>
+                    <p class="font-mono text-gray-200 text-sm whitespace-pre-line">Experienced in both functional and OOP: Dart, Python, Java, JavaScript, TypeScript.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="flex flex-col items-start p-8 border-b md:border-b-0 md:border-r border-gray-500 bg-[#232127] min-h-[260px]">
+                    <div class="mb-4">
+                        <i class="fas fa-atom text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2"><span class="text-blue-400 font-mono">Frontend Dev</span> <span class="text-white">React, NextJS</span></h3>
+                    <p class="font-mono text-gray-200 text-sm whitespace-pre-line">Passionate about UI/UX. Over 5 years of development experience in HTML, CSS, JS, React and NextJS frameworks.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="flex flex-col items-start p-8 bg-[#232127] min-h-[260px]">
+                    <div class="mb-4">
+                        <i class="fab fa-android text-2xl text-white"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2"><span class="text-orange-400 font-mono">Flutter Dev</span> <span class="text-white">Android, iOS</span></h3>
+                    <p class="font-mono text-gray-200 text-sm whitespace-pre-line">Skilled in developing hybrid mobile apps and cross-platform solutions using the Flutter framework.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Project Section -->
+    <section id="work" class="py-32 bg-[#232127] relative overflow-x-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between px-8">
+            <!-- Left: Title and Description -->
+            <div class="flex-1 min-w-[320px]">
+                <h2 class="text-5xl font-bold text-white mb-8 leading-tight">My<br>Work</h2>
+                <p class="font-mono text-gray-200 text-base mb-10 max-w-md">
+                    Deployed scalable travel, event and telemedicine web and hybrid mobile apps using React SPA and PWA.<br>
+                    Collaborated in 140+ projects with 50+ clients all around the world. I am also interested in data analytics and visualization.
+                </p>
+                <div class="mt-8">
+                    <span class="text-white text-sm font-mono">Featured Project</span><br>
+                    <span class="text-2xl font-bold text-white font-mono">Tryotel App</span><br>
+                    <a href="#" class="inline-block mt-4 px-6 py-2 bg-purple-600 text-white font-mono rounded hover:bg-purple-700 transition-colors text-sm shadow">View Project</a>
+                </div>
+            </div>
+            <!-- Right: Phone Image and Arrow -->
+            <div class="flex-1 flex flex-col items-center justify-center relative mt-16 md:mt-0">
+                <!-- Arrow (SVG) -->
+                <svg class="absolute -left-24 top-24 w-32 h-32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 110 Q60 10 110 60" stroke="#A259FF" stroke-width="3" fill="none"/>
+                    <polygon points="110,60 100,55 102,65" fill="#A259FF"/>
+                </svg>
+                <!-- Phone Image Placeholder -->
+                <div class="w-56 h-96 bg-gray-800 rounded-3xl shadow-2xl transform -rotate-20 flex items-center justify-center overflow-hidden">
+                    <span class="text-gray-500 font-mono">[Phone Image]</span>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom right circle -->
+        <div class="absolute bottom-4 right-8 z-20">
+            <div class="w-5 h-5 border-2 border-cyan-300 rounded-full"></div>
+        </div>
+    </section>
+
+    <!-- List of Projects Section -->
+    <section id="projects" class="py-24 bg-[#232127] min-h-screen">
+        <div class="max-w-7xl mx-auto px-8">
+            <!-- Filter Bar -->
+            <div class="flex items-center justify-end mb-8 space-x-6 text-sm font-mono text-gray-300">
+                <span class="font-semibold text-white">Filter by</span>
+                <button class="text-cyan-300 border-b-2 border-cyan-300 pb-1">All <span class="text-xs align-top">10</span></button>
+                <button class="hover:text-cyan-300">Data Visualization <span class="text-xs align-top">01</span></button>
+                <button class="hover:text-cyan-300">Web Development <span class="text-xs align-top">08</span></button>
+            </div>
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-[#232127] rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                    <div class="h-40 bg-gray-800 flex items-center justify-center">
+                        <span class="text-gray-500 font-mono">[Image]</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-white font-semibold truncate">Flight Local (B2B Travel ...</h3>
+                        <p class="text-gray-400 text-xs mt-1">Web Development</p>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-[#232127] rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                    <div class="h-40 bg-gray-800 flex items-center justify-center">
+                        <span class="text-gray-500 font-mono">[Image]</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-white font-semibold truncate">AI Lab Granada</h3>
+                        <p class="text-gray-400 text-xs mt-1">Web Development</p>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-[#232127] rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                    <div class="h-40 bg-gray-800 flex items-center justify-center">
+                        <span class="text-gray-500 font-mono">[Image]</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-white font-semibold truncate">Khora – Urban Thinkers ...</h3>
+                        <p class="text-gray-400 text-xs mt-1">Web Development</p>
+                    </div>
+                </div>
+                <!-- Project Card 4 -->
+                <div class="bg-[#232127] rounded-lg shadow hover:shadow-lg transition overflow-hidden col-span-1 sm:col-span-2 lg:col-span-2 row-span-2">
+                    <div class="h-72 bg-gray-800 flex items-center justify-center">
+                        <span class="text-gray-500 font-mono">[Image]</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-white font-semibold truncate">Tryotel – Cross-Platform Travel App</h3>
+                        <p class="text-gray-400 text-xs mt-1">Flight booking app for iOS platform</p>
+                    </div>
+                </div>
+                <!-- Project Card 5 -->
+                <div class="bg-[#232127] rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                    <div class="h-40 bg-gray-800 flex items-center justify-center">
+                        <span class="text-gray-500 font-mono">[Image]</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-white font-semibold truncate">Tapy – Download. Conne...</h3>
+                        <p class="text-gray-400 text-xs mt-1">Web Development</p>
+                    </div>
+                </div>
+                <!-- Project Card 6 -->
+                <div class="bg-[#232127] rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+                    <div class="h-40 bg-gray-800 flex items-center justify-center">
+                        <span class="text-gray-500 font-mono">[Image]</span>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-white font-semibold truncate">[Project Name]</h3>
+                        <p class="text-gray-400 text-xs mt-1">Web Development</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Bottom right circle -->
+            <div class="absolute bottom-4 right-8 z-20">
+                <div class="w-5 h-5 border-2 border-cyan-300 rounded-full"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-[#232127] flex items-center justify-center min-h-screen">
+        <div class="w-full max-w-lg mx-auto">
+            <div class="backdrop-blur-md bg-white/10 border border-gray-700 rounded-2xl shadow-xl p-10">
+                <h2 class="text-3xl font-bold text-center text-white mb-8">Get in Touch</h2>
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Name" class="w-full bg-white/20 border border-gray-600 rounded-lg px-5 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white/30 transition" autocomplete="off">
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Email" class="w-full bg-white/20 border border-gray-600 rounded-lg px-5 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white/30 transition" autocomplete="off">
+                    </div>
+                    <div>
+                        <textarea id="message" name="message" rows="4" placeholder="Message" class="w-full bg-white/20 border border-gray-600 rounded-lg px-5 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:bg-white/30 transition"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 rounded-lg font-bold text-lg bg-gradient-to-r from-cyan-400 to-purple-500 text-white shadow-lg hover:from-cyan-500 hover:to-purple-600 transition">Send Message</button>
+                </form>
+                <div class="mt-10 flex justify-center space-x-8">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800 py-8">
+        <div class="container mx-auto px-4 text-center text-gray-400">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
